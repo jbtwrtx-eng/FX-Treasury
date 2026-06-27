@@ -1,0 +1,109 @@
+.stat-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 28px 28px 24px;
+  overflow: hidden;
+  transition:
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.stat-card__glow {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.stat-card--gold .stat-card__glow {
+  background: radial-gradient(circle, var(--accent-gold), transparent 70%);
+}
+
+.stat-card--gold {
+  border-top: 2px solid rgba(212, 175, 55, 0.4);
+}
+
+.stat-card--gold .stat-card__value {
+  color: var(--accent-gold);
+}
+
+.stat-card--gold .stat-card__change {
+  color: var(--accent-gold);
+  background: var(--accent-gold-dim);
+}
+
+.stat-card--emerald .stat-card__glow {
+  background: radial-gradient(circle, var(--accent-emerald), transparent 70%);
+}
+
+.stat-card--emerald {
+  border-top: 2px solid rgba(52, 211, 153, 0.4);
+}
+
+.stat-card--emerald .stat-card__value {
+  color: var(--accent-emerald);
+}
+
+.stat-card--emerald .stat-card__change {
+  color: var(--accent-emerald);
+  background: var(--accent-emerald-dim);
+}
+
+.stat-card--amber .stat-card__glow {
+  background: radial-gradient(circle, var(--accent-amber), transparent 70%);
+}
+
+.stat-card--amber {
+  border-top: 2px solid rgba(251, 191, 36, 0.4);
+}
+
+.stat-card--amber .stat-card__value {
+  color: var(--accent-amber);
+}
+
+.stat-card--amber .stat-card__change {
+  color: var(--accent-amber);
+  background: var(--accent-amber-dim);
+}
+
+.stat-card__label {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+
+.stat-card__value {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.stat-card__change {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 600px) {
+  .stat-card__value {
+    font-size: 26px;
+  }
+}

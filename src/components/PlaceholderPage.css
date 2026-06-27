@@ -1,0 +1,31 @@
+.placeholder {
+  max-width: 800px;
+}
+
+.placeholder__header {
+  margin-bottom: 32px;
+}
+
+.placeholder__eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.placeholder__title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.placeholder__body {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}

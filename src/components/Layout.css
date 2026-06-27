@@ -1,0 +1,22 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.layout__main {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  padding: 40px 48px;
+  overflow-y: auto;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(212, 175, 55, 0.04), transparent),
+    var(--bg-base);
+}
+
+@media (max-width: 768px) {
+  .layout__main {
+    margin-left: 0;
+    padding: 24px 20px;
+    padding-top: 72px;
+  }
+}

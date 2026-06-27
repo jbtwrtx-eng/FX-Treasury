@@ -1,25 +1,28 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { Dashboard } from './components/Dashboard'
 import { PlaceholderPage } from './components/PlaceholderPage'
 import { MENU_ITEMS } from './constants/menu'
 
 function App() {
-  const [activeMenuId, setActiveMenuId] = useState('dashboard')
-
-  const activeMenu = MENU_ITEMS.find((item) => item.id === activeMenuId)
-
   return (
-    <Layout
-      activeMenuId={activeMenuId}
-      onMenuSelect={setActiveMenuId}
-    >
-      {activeMenuId === 'dashboard' ? (
-        <Dashboard />
-      ) : (
-        <PlaceholderPage title={activeMenu?.label ?? ''} />
-      )}
-    </Layout>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          {MENU_ITEMS.map((item) =>
+            item.id === 'dashboard' ? (
+              <Route key={item.id} index element={<Dashboard />} />
+            ) : (
+              <Route
+                key={item.id}
+                path={item.path.slice(1)}
+                element={<PlaceholderPage title={item.label} />}
+              />
+            ),
+          )}
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

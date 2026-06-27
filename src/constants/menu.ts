@@ -1,19 +1,19 @@
 import type { MenuItem, StatCard } from '../types'
 
 export const MENU_ITEMS: MenuItem[] = [
-  { id: 'dashboard', label: 'ダッシュボード', icon: '◈' },
-  { id: 'transfer', label: '資金移動', icon: '⇄' },
-  { id: 'titan-fx', label: 'TITAN FX', icon: '◉' },
-  { id: 'trust-wallet', label: 'Trust Wallet', icon: '◎' },
-  { id: 'gmo-coin', label: 'GMOコイン', icon: '◆' },
-  { id: 'sbi-vc', label: 'SBI VCトレード', icon: '◇' },
-  { id: 'bitbank', label: 'bitbank', icon: '▣' },
-  { id: 'rakuten', label: '楽天銀行', icon: '▤' },
-  { id: 'yucho', label: 'ゆうちょ銀行', icon: '▥' },
-  { id: 'txid', label: 'TXID管理', icon: '⛓' },
-  { id: 'documents', label: '証憑管理', icon: '▦' },
-  { id: 'tax', label: '税金', icon: '▧' },
-  { id: 'settings', label: '設定', icon: '⚙' },
+  { id: 'dashboard', label: 'ダッシュボード', icon: '◈', path: '/' },
+  { id: 'transfer', label: '資金移動', icon: '⇄', path: '/transfer' },
+  { id: 'titan-fx', label: 'TITAN FX', icon: '◉', path: '/titan-fx' },
+  { id: 'trust-wallet', label: 'Trust Wallet', icon: '◎', path: '/trust-wallet' },
+  { id: 'gmo-coin', label: 'GMOコイン', icon: '◆', path: '/gmo-coin' },
+  { id: 'sbi-vc', label: 'SBI VCトレード', icon: '◇', path: '/sbi-vc' },
+  { id: 'bitbank', label: 'bitbank', icon: '▣', path: '/bitbank' },
+  { id: 'rakuten', label: '楽天銀行', icon: '▤', path: '/rakuten' },
+  { id: 'yucho', label: 'ゆうちょ銀行', icon: '▥', path: '/yucho' },
+  { id: 'txid', label: 'TXID管理', icon: '⛓', path: '/txid' },
+  { id: 'documents', label: '証憑管理', icon: '▦', path: '/documents' },
+  { id: 'tax', label: '税金', icon: '▧', path: '/tax' },
+  { id: 'settings', label: '設定', icon: '⚙', path: '/settings' },
 ]
 
 export const DASHBOARD_STATS: StatCard[] = [

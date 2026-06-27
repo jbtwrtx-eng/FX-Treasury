@@ -1,12 +1,8 @@
+import { NavLink } from 'react-router-dom'
 import { MENU_ITEMS } from '../constants/menu'
 import './Sidebar.css'
 
-type SidebarProps = {
-  activeMenuId: string
-  onMenuSelect: (id: string) => void
-}
-
-export function Sidebar({ activeMenuId, onMenuSelect }: SidebarProps) {
+export function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="sidebar__brand">
@@ -21,16 +17,18 @@ export function Sidebar({ activeMenuId, onMenuSelect }: SidebarProps) {
         <ul className="sidebar__menu">
           {MENU_ITEMS.map((item) => (
             <li key={item.id}>
-              <button
-                type="button"
-                className={`sidebar__item ${activeMenuId === item.id ? 'sidebar__item--active' : ''}`}
-                onClick={() => onMenuSelect(item.id)}
+              <NavLink
+                to={item.path}
+                end={item.path === '/'}
+                className={({ isActive }) =>
+                  `sidebar__item ${isActive ? 'sidebar__item--active' : ''}`
+                }
               >
                 <span className="sidebar__icon" aria-hidden="true">
                   {item.icon}
                 </span>
                 <span className="sidebar__label">{item.label}</span>
-              </button>
+              </NavLink>
             </li>
           ))}
         </ul>

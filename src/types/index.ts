@@ -2,6 +2,7 @@ export type MenuItem = {
   id: string
   label: string
   icon: string
+  path: string
 }
 
 export type StatCard = {

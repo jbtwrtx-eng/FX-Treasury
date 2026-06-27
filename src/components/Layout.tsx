@@ -1,18 +1,13 @@
+import { Outlet } from 'react-router-dom'
 import { Sidebar } from './Sidebar'
 import './Layout.css'
 
-type LayoutProps = {
-  activeMenuId: string
-  onMenuSelect: (id: string) => void
-  children: React.ReactNode
-}
-
-export function Layout({ activeMenuId, onMenuSelect, children }: LayoutProps) {
+export function Layout() {
   return (
     <div className="layout">
-      <Sidebar activeMenuId={activeMenuId} onMenuSelect={onMenuSelect} />
+      <Sidebar />
       <main className="layout__main">
-        {children}
+        <Outlet />
       </main>
     </div>
   )
